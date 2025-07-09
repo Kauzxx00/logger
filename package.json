@@ -1,0 +1,26 @@
+{
+  "name": "@kauzx/logger",
+  "version": "1.0.0",
+  "description": "A simple utility to print colored messages in the console.",
+  "keywords": [
+    "console",
+    "log",
+    "terminal",
+    "colors"
+  ],
+  "homepage": "https://github.com/Kauzxx00/logger#readme",
+  "bugs": {
+    "url": "https://github.com/Kauzxx00/logger/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kauzxx00/logger.git"
+  },
+  "license": "MIT",
+  "author": "Kauzx00",
+  "type": "commonjs",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node src/index.js"
+  }
+}
