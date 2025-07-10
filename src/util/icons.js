@@ -1,3 +1,7 @@
+/**
+ * Unicode icons for each log level.
+ * @type {{ [key: string]: string }}
+ */
 const icon = {
   info: "ℹ",
   warn: "⚠",

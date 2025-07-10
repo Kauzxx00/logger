@@ -1,23 +1,34 @@
 const icon = require("../util/icons.js");
 const parser = require("./parser.js");
 
-const logger = {
-  warn(text) {
-    console.log(parser(`{yellow ${icon.warn} ${text}}`));
-  },
-  error(text) {
-    console.log(parser(`{red ${icon.error} ${text}}`));
-  },
-  success(text) {
-    console.log(parser(`{green ${icon.success} ${text}}`));
-  },
-  info(text) {
-    console.log(parser(`{white ${icon.info} ${text}}`));
-  },
-  debug(text) {
-    console.log(parser(`{cyan ${icon.debug} ${text}}`));
-  },
+/**
+ * @typedef {Object} Logger
+ * @property {(text: string, disableIcon?: boolean) => void} warn
+ * @property {(text: string, disableIcon?: boolean) => void} error
+ * @property {(text: string, disableIcon?: boolean) => void} success
+ * @property {(text: string, disableIcon?: boolean) => void} info
+ * @property {(text: string, disableIcon?: boolean) => void} debug
+ * @property {(text: string) => void} style
+ * @property {(text: string) => string} format
+ */
 
+/** @type {Logger} */
+const logger = {
+  warn(text, disableIcon = false) {
+    console.log(parser(`{yellow ${disableIcon ? "" : icon.warn + " "}${text}}`));
+  },
+  error(text, disableIcon = false) {
+    console.log(parser(`{red ${disableIcon ? "" : icon.error + " "}${text}}`));
+  },
+  success(text, disableIcon = false) {
+    console.log(parser(`{green ${disableIcon ? "" : icon.success + " "}${text}}`));
+  },
+  info(text, disableIcon = false) {
+    console.log(parser(`{white ${disableIcon ? "" : icon.info + " "}${text}}`));
+  },
+  debug(text, disableIcon = false) {
+    console.log(parser(`{cyan ${disableIcon ? "" : icon.debug + " "}${text}}`));
+  },
   style(text) {
     console.log(parser(text));
   },
