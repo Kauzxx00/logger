@@ -26,8 +26,10 @@ const { logger, icon } = require('@kauzx/logger');
 logger.info("Service initialized");
 logger.warn("Storage 80% full");
 logger.error("Failed to connect");
-logger.success("Payment processed");
-logger.debug("Session ID: abc123");
+
+// No icon
+logger.success("Payment processed", true);
+logger.debug("Session ID: abc123", true);
 
 // Advanced styling
 logger.style(`{bold.cyan ${icon.checkCircle} Important:} {underline Update} {bgRed.white required}`);

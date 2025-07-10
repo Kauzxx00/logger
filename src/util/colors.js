@@ -1,3 +1,7 @@
+/**
+ * ANSI color codes for terminal output.
+ * @type {{ [key: string]: string }}
+ */
 const color = {
   // Text colors
   black: "\x1b[30m",
