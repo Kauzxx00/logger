@@ -1,7 +1,8 @@
 /**
- * Unicode icons for each log level.
- * @type {{ [key: string]: string }}
+ * @typedef {Object.<string, string>} IconMap
  */
+
+/** @type {IconMap} */
 const icon = {
   info: "ℹ",
   warn: "⚠",

@@ -2,19 +2,23 @@ const icon = require("../util/icons.js");
 const parser = require("./parser.js");
 
 /**
+ * @typedef {(text: string, disableIcon?: boolean) => void} LoggerMethod
+ * @typedef {(text: string) => void} LoggerSimpleMethod
+ * @typedef {(text: string) => string} LoggerFormatMethod
+ *
  * @typedef {Object} Logger
- * @property {(text: string, disableIcon?: boolean) => void} warn
- * @property {(text: string, disableIcon?: boolean) => void} error
- * @property {(text: string, disableIcon?: boolean) => void} success
- * @property {(text: string, disableIcon?: boolean) => void} info
- * @property {(text: string, disableIcon?: boolean) => void} debug
- * @property {(text: string) => void} style
- * @property {(text: string) => string} format
+ * @property {LoggerMethod} warn
+ * @property {LoggerMethod} error
+ * @property {LoggerMethod} success
+ * @property {LoggerMethod} info
+ * @property {LoggerMethod} debug
+ * @property {LoggerSimpleMethod} style
+ * @property {LoggerFormatMethod} format
  */
 
 /** @type {Logger} */
 const logger = {
-  warn(text, disableIcon = false) {
+  warn(text , disableIcon = false) {
     console.log(parser(`{yellow ${disableIcon ? "" : icon.warn + " "}${text}}`));
   },
   error(text, disableIcon = false) {

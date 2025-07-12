@@ -1,9 +1,9 @@
 /**
- * ANSI color codes for terminal output.
- * @type {{ [key: string]: string }}
+ * @typedef {Object.<string, string>} ColorMap
  */
+
+/** @type {ColorMap} */
 const color = {
-  // Text colors
   black: "\x1b[30m",
   red: "\x1b[31m",
   green: "\x1b[32m",
@@ -13,8 +13,6 @@ const color = {
   cyan: "\x1b[36m",
   white: "\x1b[37m",
   gray: "\x1b[90m",
-
-  // Bright colors
   brightRed: "\x1b[91m",
   brightGreen: "\x1b[92m",
   brightYellow: "\x1b[93m",
@@ -22,8 +20,6 @@ const color = {
   brightMagenta: "\x1b[95m",
   brightCyan: "\x1b[96m",
   brightWhite: "\x1b[97m",
-
-  // Background colors
   bgBlack: "\x1b[40m",
   bgRed: "\x1b[41m",
   bgGreen: "\x1b[42m",
@@ -33,8 +29,6 @@ const color = {
   bgCyan: "\x1b[46m",
   bgWhite: "\x1b[47m",
   bgGray: "\x1b[100m",
-
-  // Bright backgrounds
   bgBrightRed: "\x1b[101m",
   bgBrightGreen: "\x1b[102m",
   bgBrightYellow: "\x1b[103m",

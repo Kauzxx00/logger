@@ -6,7 +6,9 @@
     "console",
     "log",
     "terminal",
-    "colors"
+    "colors",
+    "logger",
+    "cli"
   ],
   "homepage": "https://github.com/Kauzxx00/logger#readme",
   "bugs": {
@@ -19,8 +21,22 @@
   "license": "MIT",
   "author": "Kauzx00",
   "type": "commonjs",
-  "main": "src/index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    "import": "./dist/index.js",
+    "require": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "node src/index.js"
+    "build:types": "tsc",
+    "build": "npm run build:types && npm run build:copy"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "typescript": "^5.4.5",
+    "undici-types": "^7.11.0"
   }
 }

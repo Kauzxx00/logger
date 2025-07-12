@@ -4,17 +4,12 @@ const style = require("./util/styles.js");
 const icon = require("./util/icons.js");
 
 /**
- * @typedef {import("./controllers/logger.js")} Logger
+ * @module @kauzx/logger
+ * @typedef {import('./controllers/logger.js').Logger} Logger
+ * @typedef {typeof import('./util/colors.js')} Color
+ * @typedef {typeof import('./util/styles.js')} Style
+ * @typedef {typeof import('./util/icons.js')} Icon
  */
 
-/**
- * @type {{
- *   logger: Logger,
- *   color: { [key: string]: string },
- *   style: { [key: string]: string },
- *   icon: { [key: string]: string }
- * }}
- */
-const exported = { logger, color, style, icon };
-
-module.exports = exported;
+/** @type {{ logger: Logger, color: Color, style: Style, icon: Icon }} */
+module.exports = { logger, color, style, icon };

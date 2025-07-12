@@ -1,7 +1,8 @@
 /**
- * ANSI style codes for text formatting.
- * @type {{ [key: string]: string }}
+ * @typedef {Object.<string, string>} StyleMap
  */
+
+/** @type {StyleMap} */
 const style = {
   reset: "\x1b[0m",
   bold: "\x1b[1m",
