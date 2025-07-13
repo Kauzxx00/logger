@@ -24,6 +24,7 @@ coverage
 
 # local tests
 test/
+scripts/
 
 # nyc test coverage
 .nyc_output
