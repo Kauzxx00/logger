@@ -1,6 +1,6 @@
 {
   "name": "@kauzx/logger",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A simple utility to print colored messages in the console.",
   "keywords": [
     "console",
@@ -32,7 +32,9 @@
   ],
   "scripts": {
     "build:types": "tsc",
-    "build": "npm run build:types && npm run build:copy"
+    "build:copy": "node scripts/copyFiles.js",
+    "build": "npm run build:types && npm run build:copy",
+    "test": "node test/index.js"
   },
   "devDependencies": {
     "@types/node": "^20.11.30",
