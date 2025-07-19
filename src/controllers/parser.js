@@ -53,7 +53,7 @@ function getStyleCodes(stylesStr, allStyles) {
  * @returns {string}
  */
 function parser(text) {
-  text = text.replace(/\/\{/g, "__OPEN_BRACE__").replace(/\/\}/g, "__CLOSE_BRACE__");
+  text = text.replace(/\\\{/g, "__OPEN_BRACE__").replace(/\\\}/g, "__CLOSE_BRACE__");
 
   const templateRegex = /\{([^{}]+)\}/g;
 

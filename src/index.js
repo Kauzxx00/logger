@@ -3,10 +3,6 @@ const color = require("./util/colors.js");
 const style = require("./util/styles.js");
 const icon = require("./util/icons.js");
 
-function format(obj) {
-    return JSON.stringify(obj).replace(/\{/g, "/{").replace(/\}/g, "/}");
-}
-
 /**
  * @module @kauzx/logger
  * @typedef {import('./controllers/logger.js').Logger} Logger
@@ -16,4 +12,4 @@ function format(obj) {
  */
 
 /** @type {{ logger: Logger, color: Color, style: Style, icon: Icon }} */
-module.exports = { logger, color, style, icon, format };
+module.exports = { logger, color, style, icon };

@@ -44,7 +44,7 @@ const { logger, icon } = require("@kauzx/logger");
 // Basic usage
 logger.info("Service started");
 logger.warn("Low disk space");
-logger.error("Failed to connect");
+logger.error("Failed to \\{ connect \\}");
 
 // Passing multiple values
 const user = { name: "Kau", id: 123 };

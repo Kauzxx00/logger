@@ -15,7 +15,7 @@ function formatArgs(args) {
 
     // Se for objeto ou outro tipo, transforma em string segura e escapa chaves
     const text = JSON.stringify(arg, null, 0);
-    return text.replace(/\{/g, "/{").replace(/\}/g, "/}");
+    return text.replace(/\{/g, "\\{").replace(/\}/g, "\\}");
   }).join(" ");
 }
 
@@ -106,7 +106,7 @@ const logger = {
   },
   format(args) {
     args = typeof args !== "string" ? JSON.stringify(args) : args;
-    return args.replace(/\{/g, "/{").replace(/\}/g, "/}");
+    return args.replace(/\{/g, "\\{").replace(/\}/g, "\\}");
   },
   setColor(colors) {
     setCustomColors(colors);
